@@ -4,12 +4,12 @@ TC.controller('MainCtrl',
     ['$rootScope', '$scope', 'Data',
 
     function ($rootScope, $scope, Data) {
-        $scope.commit = "Loading latest commit...";
+        // $scope.commit = "Loading latest commit...";
 
         //Start main data functions
-        Data.getLatestCommit().then(function(res){
-            $scope.commit = res.data;
-        });
+        // Data.get().then(function(res){
+        //     $scope.commit = res.data;
+        // });
 
         //
 }]);
@@ -25,11 +25,11 @@ TC.factory('Data',
         //
         return {
 
-            getLatestCommit: function () {
+            get: function () {
                 var dfd = $q.defer();
-                var url = "https://api.github.com/users/trevorjtclarke/tjtc/commits";
+                var url = "";
 
-                $http.get( url ).then(function (res) {
+                $http.get( url ).then(function (err, res) {
                     console.log(res);
                     dfd.resolve(res);
                 });

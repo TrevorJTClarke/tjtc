@@ -10,9 +10,9 @@ TC.factory('Data',
         //
         return {
 
-            getLatestCommit: function () {
+            get: function () {
                 var dfd = $q.defer();
-                var url = "https://api.github.com/users/trevorjtclarke/tjtc/commits";
+                var url = "";
 
                 $http.get( url ).then(function (err, res) {
                     console.log(res);

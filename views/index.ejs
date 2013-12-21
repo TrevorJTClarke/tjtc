@@ -24,7 +24,11 @@
             </div>
             <div class="_bb-account-details">
                 <h1 class="_bb-detail-public-name">Trevor Clarke</h1>
-                <h3 class="_bb-detail-slogan">{{commit}}</h3>
+                <% if (commit) { %>
+                    <h3 class="_bb-detail-slogan">"<%- commit %>"</h3>
+                <% } else { %>
+                    <h3 class="_bb-detail-slogan">"Building Babblr, the biggest undertaking to date..."</h3>
+                <% } %>
             </div>
             <div class="_bb-account-details _bb-account-private">
                 <dl class="_bb-private-info">
