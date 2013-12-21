@@ -1,4 +1,4 @@
-BB.controller('MainCtrl',
+TC.controller('MainCtrl',
 
     ['$rootScope', '$scope', 'Data',
 

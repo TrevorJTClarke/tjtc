@@ -1,9 +1,10 @@
 /* TJTC StyleSheet */
 .cl, #cl, .clearfix {clear:both;}
 body {
-	background-color: #f2f2f2;
+	background-color: #f9f9f9;
 	width:100%;
 	height:100%;
+    padding-top: 100px;
 }
 
 h1, h2, h3 {
@@ -278,5 +279,100 @@ h1, h2, h3 {
     &._bb-edit-mode {
         box-shadow: 0 2px 25px -5px rgba(47,171,112,0.5);
         border: 1px solid rgba(47,171,112, 0.4);
+    }
+}
+
+._bb-module-avatar {
+    position:relative;
+    display: inline-block;
+    margin: 20px;
+
+    ._bb-edit-msg {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 100px;
+        box-sizing: border-box;
+        color: rgba(255,255,255,0.8);
+        display: none;
+        position: absolute;
+        font: normal 900 16px/16px Helvetica, Arial, sans-serif;
+        margin-top: -8px;
+        padding-top: 90px;
+        left: 4px;
+        top: 12px;
+        text-align: center;
+        width:200px;
+        height: 200px;
+        z-index: 999;
+    }
+
+    ._bb-avatar-mask {
+        border: 4px solid rgba(0,0,0,0.05);
+        border-radius: 120px;
+        width: 200px;
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+        z-index: 99;
+
+        ._bb-avatar-image {
+            width: 200px;
+            height: auto;
+            min-height: 200px;
+        }
+    }
+    
+    ._bb-circle-progress {
+        width:208px;
+        height:208px;
+        position: absolute;
+        top: 0px;
+        left:0px;
+        z-index: 9;
+
+        .progress-wrap {
+            position:absolute;
+            width:212px;
+            height:212px;
+            clip:rect(0px,208px,208px,104px);
+
+            &.progress-half {
+                clip:rect(auto, auto, auto, auto);
+            }
+
+            .progress-line {
+                border: 4px solid rgb(47,171,112);
+                position:absolute;
+                width:200px;
+                height:200px;
+                clip:rect(0px,104px,208px,0px);
+                -moz-border-radius:104px;
+                -webkit-border-radius:104px; 
+                border-radius:104px; 
+
+                &.progress-fill {
+                    -moz-transform:rotate(180deg) !important;
+                    -webkit-transform:rotate(180deg) !important;
+                    -o-transform:rotate(180deg) !important;
+                    transform:rotate(180deg) !important;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        ._bb-edit-msg {
+            display: block;
+        }
+    }
+
+    &.uploading {
+        ._bb-avatar-mask ._bb-avatar-image {
+            -webkit-filter: blur(3px);
+        }
+        ._bb-edit-msg {
+            display: block;
+        }
     }
 }
