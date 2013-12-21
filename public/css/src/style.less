@@ -1,0 +1,282 @@
+/* TJTC StyleSheet */
+.cl, #cl, .clearfix {clear:both;}
+body {
+	background-color: #f2f2f2;
+	width:100%;
+	height:100%;
+}
+
+h1, h2, h3 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: 400;
+}
+
+._bb-account-card {
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    width: 600px;
+    margin: 10px auto 10px;
+    font: normal 400 14px/14px Helvetica, Arial, sans-serif;
+
+    ._bb-account-avatar {
+        border: 4px solid rgba(0,0,0,0.05);
+        border-radius: 120px;
+        display: inline-block;
+        width: 200px;
+        height: 200px;
+        margin:20px;
+        overflow: hidden;
+        position: relative;
+
+        ._bb-edit-avatar {
+            color: rgba(0,0,0,0.6);
+            display: none;
+            position: absolute;
+            font-size: 150px;
+            line-height: 150px;
+            left: 50%;
+            top: 50%;
+            margin: -85px 0 0 -50px;
+        }
+
+        ._bb-avatar-image {
+            width: 200px;
+            height: 100%;
+        }
+    }
+
+    &._bb-edit-mode {
+        box-shadow: 0 2px 25px -5px rgba(47,171,112,0.5);
+        border: 1px solid rgba(47,171,112, 0.4);
+
+        ._bb-detail-editable {
+            border-bottom: 2px solid #fff;
+            cursor:text;
+            outline:none !important;
+
+            &:focus {
+                border-bottom: 2px dashed rgb(47,171,112);
+            }
+        }
+
+        ._bb-account-avatar {
+            &:hover {
+                border: 4px dashed rgb(0,0,0,0.7);
+                cursor: pointer;
+
+                ._bb-edit-avatar {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    ._bb-account-details {
+        display: inline-block;
+        padding: 10px 20px 20px 0;
+        vertical-align: top;
+        width: 325px;
+
+        &._bb-account-private {
+            background: #f2f2f2;
+            box-sizing: border-box;
+            border-radius: 0 0 3px 3px;
+            padding: 0px 0px 10px 40px;
+            width: 100%;
+
+            ._bb-private-info {
+                width: 30%;
+                display: inline-block;
+                text-align: left;
+                margin-left: 6px;
+                margin-right: 6px;
+            }
+        }
+
+        &._bb-account-passwords {
+            background: #f2f2f2;
+            box-sizing: border-box;
+            border-radius: 0 0 3px 3px;
+            padding: 10px 20px 10px 0px;
+            width: 100%;
+
+            ._bb-detail-passverify {
+                display: inline-block;
+                width: 208px;
+                margin: 20px;
+                vertical-align: top;
+
+                .strength {
+                    position: relative;
+
+                    span {
+                        font: normal 900 16px/18px Helvetica, Arial, sans-serif;
+                    }
+
+                    .strength-meter {
+
+                    }
+                }
+
+                .requirements {
+                    margin:0;
+                    padding:0;
+                    li {
+                        list-style: none;
+
+                    }
+                }
+            }
+
+            ._bb-pass-inputs {
+                display: inline-block;
+                width: 325px;
+                vertical-align: top;
+            }
+        }
+
+        ._bb-detail-editable {
+            border-bottom: 2px solid transparent;
+            outline:none !important;
+        }
+
+        ._bb-detail-public-name {
+            font-size: 32px;
+            font-weight: 100;
+            line-height: 36px;
+            margin:40px 0 0;
+        }
+        ._bb-detail-slogan {
+            font-size: 18px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 21px;
+            margin:15px 0 0;
+        }
+        ._bb-detail-info {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 21px;
+            margin:15px 0 0;
+        }
+        ._bb-detail-input {
+            margin:10px 0 0;
+            padding: 7px 10px;
+        }
+        ._bb-label {
+            font-size: 9px;
+            text-transform: uppercase;
+            margin:4px 0 0;
+        }
+
+        ._bb-detail-username {
+            position: relative;
+            z-index: 0;
+
+            &:after {
+                content: attr(data-content);
+                position: absolute;
+                right: 10px;
+                top: 18px;
+                // width: 100px;
+                height: 20px;
+                text-align: right;
+                font-style: italic;
+                z-index: 99;
+            }
+
+            &.invalid:after {
+                color: #cc2525!important;
+            }
+            &.valid:after {
+                color: rgb(47,171,112);
+            }
+        }
+    }
+}
+
+._bb-account-submit {
+    width: 600px;
+    margin: 0 auto 40px;
+
+    ._bb-btn-submit {
+        margin-right: 20px;
+    }
+    ._bb-btn-cancel {
+        background: #333;
+        float: right;
+    }
+}
+
+/* SETTINGS */
+._bb-account-settings {
+    background: #fff;
+    border-radius: 3px;
+    border: 1px solid #f2f2f2;
+    box-sizing: border-box;
+    width: 600px;
+    padding: 5px 30px;
+    margin: 10px auto 10px;
+    font: normal 400 14px/14px Helvetica, Arial, sans-serif;
+
+    ._bb-settings-section {
+
+        ._bb-settings-heading {
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            font: normal 500 18px/21px Helvetica, Arial, sans-serif;
+            padding-bottom: 10px;
+        }
+
+        ._bb-settings-list {
+            margin: 0;
+            padding: 0;
+
+            .setting-item {
+                margin: 0 0 20px;
+                padding: 0;
+                list-style: none;
+
+                h4 {
+                    display: inline-block;
+                    width: 455px;
+                    margin:0;
+                    vertical-align: top;
+                }
+                p {
+                    display: inline-block;
+                    width: 455px;
+                    margin: 5px 0 7px;
+                    vertical-align: top;
+                }
+
+                .setting-toggle {
+                    display: inline-block;
+                    vertical-align: top;
+                    width: 70px;
+
+                    ._bb-toggle {
+                        background: transparent;
+                        border: 1px solid rgba(0,0,0,0.2);
+                        border-radius: 3px;
+                        color: rgba(0,0,0,0.2);
+                        cursor: pointer;
+                        display: inline-block;
+                        margin: 0 0 0 7px;
+                        padding: 4px;
+                        width: 15px;
+                        text-align: center;
+                        vertical-align: top;
+
+                    }
+                }
+            }
+        }
+    }
+
+    &._bb-edit-mode {
+        box-shadow: 0 2px 25px -5px rgba(47,171,112,0.5);
+        border: 1px solid rgba(47,171,112, 0.4);
+    }
+}

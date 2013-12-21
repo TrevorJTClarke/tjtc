@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="TJTC">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>Trevor Clarke</title>
+    <meta name="keywords" content="Full Stack Web developer, Built Babblr, real-time, web sockets, node js, css3, html5, javascript, angular"/>
+    <meta name="description" content="A man of many talents, hopes, and aspirations"/>
+    <meta name="author" content="Trevor Clarke"/>
+    <meta name="viewport" content="maximum-scale=1.0, width=device-width"/>
+
+    <link rel="stylesheet" href="/css/build/style.css">
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+</head>
+<body>
+<section ng-controller="MainCtrl">
+    <div class="container">
+        <div class="_bb-account-card">
+            <div class="_bb-module-avatar">
+                <div class="_bb-avatar-mask">
+                    <img class="_bb-avatar-image" src="https://0.gravatar.com/avatar/ebbf1b91dd19b07d9c78b6efefca2cc2?d=https%3A%2F%2Fidenticons.github.com%2Fa1651c93f4fea7689001a33dfd03985c.png&r=x&s=440" alt="Trevor Clarke">
+                </div>
+            </div>
+            <div class="_bb-account-details">
+                <h1 class="_bb-detail-public-name">Trevor Clarke</h1>
+                <h3 class="_bb-detail-slogan">{{commit}}</h3>
+            </div>
+            <div class="_bb-account-details _bb-account-private">
+                <dl class="_bb-private-info">
+                    <dt class="_bb-detail-editable _bb-detail-info"><a href="https://github.com/TrevorJTClarke" target="_blank">TrevorJTClarke</a></dt>
+                    <dd class="_bb-label">Github</dd>
+                </dl>
+                <dl class="_bb-private-info">
+                    <dt class="_bb-detail-editable _bb-detail-info">trevor@babblr.me</dt>
+                    <dd class="_bb-label">Email</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type="text/javascript" src="/js/build/app.js"></script>
+</body>
+</html>
